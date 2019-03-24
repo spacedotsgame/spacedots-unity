@@ -7,7 +7,7 @@ public class LIFESAddCounter : MonoBehaviour
 {
     Text text;
     static float TimeLeft;
-    float TotalTimeForRestLife = 15f * 60;  //8 minutes for restore life
+    float TotalTimeForRestLife = 0;// 15f * 60;  //8 minutes for restore life
     bool startTimer;
     DateTime templateTime;
     // Use this for initialization

@@ -25,8 +25,21 @@ public class GUIEvents : MonoBehaviour {
 		transform.Find ("Loading").gameObject.SetActive (true);
 		SceneManager.LoadScene ("game");
 	}
+    public void PrivateGame()
+    {
+        SoundBase.Instance.GetComponent<AudioSource>().PlayOneShot(SoundBase.Instance.click);
 
-	public void Pause () {
+        transform.Find("Loading").gameObject.SetActive(true);
+        SceneManager.LoadScene("game");
+    }
+    public void BuyCrystals()
+    {
+        SoundBase.Instance.GetComponent<AudioSource>().PlayOneShot(SoundBase.Instance.click);
+
+        //transform.Find("Loading").gameObject.SetActive(true);
+        //SceneManager.LoadScene("game");
+    }
+    public void Pause () {
 		SoundBase.Instance.GetComponent<AudioSource> ().PlayOneShot (SoundBase.Instance.click);
 
 		if (LevelManager.THIS.gameStatus == GameState.Playing)
